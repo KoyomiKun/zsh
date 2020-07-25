@@ -104,6 +104,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+# Functions
+function countdown(){
+	date1=$((`date +%s` + $1));
+	while [ "$date1" -ge `date +%s` ]; do
+		echo -ne "$(date -u --date @$(($date1 -	`date +%s`)) +%H:%M:%S)\r";
+		sleep 0.1
+	done
+}
+
+
+
+# Alias
 alias c="clear"
 alias ra="ranger"
 alias ss="shutdown -h now"
@@ -112,5 +124,11 @@ alias vimrc="vim ~/.vim/vimrc"
 alias i3c="vim ~/.config/i3/config"
 alias sudo="sudo -E"
 alias s="screenfetch -ED 'arch'"
-alias td="cat /home/komikun/Desktop/2020"
+alias td="clear && cat /home/komikun/Desktop/2020"
 alias wc="when-changed -r -v -1 . python"
+alias ipdb="python -m ipdb"
+
+# proxy
+alias setproxy="export http_proxy=socks5://127.0.0.1:1024 ;export https_proxy=$http_proxy; echo 'HTTP Proxy on';"
+alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
+
