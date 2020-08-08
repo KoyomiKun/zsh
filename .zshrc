@@ -73,6 +73,7 @@ ZSH_THEME="bira"
 plugins=(git 
 	zsh-autosuggestions 
 	zsh-syntax-highlighting
+	vi-mode
 )
 
 
@@ -127,7 +128,7 @@ alias s="screenfetch -ED 'arch'"
 alias td="clear && cat /home/komikun/Desktop/2020"
 alias wc="when-changed -r -v -1 . python"
 alias ipdb="python -m ipdb"
-
+alias polybar="killall polybar; /home/komikun/.config/polybar/launch.sh"
 # proxy
 alias setproxy="export http_proxy=socks5://127.0.0.1:1024 ;export https_proxy=$http_proxy; echo 'HTTP Proxy on';"
 alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
