@@ -121,7 +121,7 @@ function countdown(){
 alias c="clear"
 alias ra="ranger"
 alias ss="shutdown -h now"
-alias git="proxychains4 -q git"
+alias git="git"
 alias vimrc="vim ~/.vim/vimrc"
 alias i3c="vim ~/.config/i3/config"
 alias sudo="sudo -E"
@@ -131,6 +131,7 @@ alias wc="when-changed -r -v -1 . python"
 alias ipdb="python -m ipdb"
 alias polybar="killall polybar; /home/komikun/.config/polybar/launch.sh"
 # proxy
-alias setproxy="export http_proxy=socks5://127.0.0.1:1024 ;export https_proxy=$http_proxy; echo 'HTTP Proxy on';"
+alias setproxy="export http_proxy=socks5://127.0.0.1:1080 ;export https_proxy= $http_proxy; echo 'HTTP Proxy on';"
 alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
+
 
