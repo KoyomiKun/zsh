@@ -1,0 +1,7 @@
+[user]
+	email = z1632259373@gmail.com
+	name = komikun
+[https]
+	proxy = https://127.0.0.1:1080
+[credential]
+    helper = store
