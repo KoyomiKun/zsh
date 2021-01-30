@@ -1,8 +1,12 @@
 # If you come from bash you might have to change your $PATH.
- export PATH=~/scripts/:$PATH
-
+export PATH=~/scripts/:$PATH
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=/home/komikun/Desktop/code/go
+export PATH=$PATH:$GOPATH/bin
 # Path to your oh-my-zsh installation.
 export ZSH="/home/komikun/.oh-my-zsh"
+export GOPROXY=https://goproxy.io
 
 # Qt Dpi
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
@@ -123,7 +127,7 @@ alias ra="ranger"
 alias ss="shutdown -h now"
 alias vimrc="vim ~/.vim/vimrc"
 alias i3c="vim ~/.config/i3/config"
-alias sudo="sudo -E"
+#alias sudo="sudo -E"
 alias s="screenfetch -ED 'arch'"
 alias td="clear && cat /home/komikun/Desktop/2020"
 alias wc="when-changed -r -v -1 . python"
