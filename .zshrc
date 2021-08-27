@@ -1,12 +1,17 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=~/scripts/:$PATH
 export GOROOT=/usr/local/go
+export GO_1_16_HOME=/usr/local/go
+export GO_1_16_BIN=$GOROOT/bin
+
 export PATH=$PATH:$GOROOT/bin
-export GOPATH=/home/komikun/Desktop/code/go
+export GOPATH=/Users/zhangzelin/Desktop/code/go
 export PATH=$PATH:$GOPATH/bin
 # Path to your oh-my-zsh installation.
-export ZSH="/home/komikun/.oh-my-zsh"
-export GOPROXY=https://goproxy.io
+export ZSH="/Users/zhangzelin/.oh-my-zsh"
+#export GOPROXY=https://goproxy.cn,direct
+#export GO111MODULE=auto
+
 
 # Qt Dpi
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
@@ -129,12 +134,17 @@ alias vimrc="vim ~/.vim/vimrc"
 alias i3c="vim ~/.config/i3/config"
 #alias sudo="sudo -E"
 alias s="screenfetch -ED 'arch'"
-alias td="clear && cat /home/komikun/Desktop/2020"
+alias td="clear && cat /home/zhangzelin/Desktop/2020"
 alias wc="when-changed -r -v -1 . python"
 alias ipdb="python -m ipdb"
-alias polybar="killall polybar; /home/komikun/.config/polybar/launch.sh"
+alias polybar="killall polybar; /home/zhangzelin/.config/polybar/launch.sh"
 # proxy
 alias setproxy="export http_proxy=socks5://127.0.0.1:1080 ;export https_proxy=socks5://127.0.0.1:1080; echo 'HTTP Proxy on';"
 alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
+alias relay="~/bin/relay_auto_login/relay"
+alias q="exit"
+alias bl="CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o build/linux"
+alias bm="CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o build/macos"
+alias bw="CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o build/windows"
 
 
